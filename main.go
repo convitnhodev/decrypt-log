@@ -29,5 +29,7 @@ func runService() error {
 		decryptLog.POST("/file", decryptTransport.DecryptFile(appCtx))
 	}
 
-	return r.Run()
+	port := "3001"
+
+	return r.Run(":" + port)
 }
